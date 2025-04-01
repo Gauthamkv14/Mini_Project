@@ -16,4 +16,5 @@ IMPROVEMENTS THAT CAN BE DONE?
 1. Maybe inside "report a disaster" we can maybe 'maybe' put "add video/image attachment".
 2. CSS can be a bit better ig?
 3. Changing webpages should be better.
-4. Change of background for each webpage.    
+4. Change of background for each webpage.
+5. Make it responsive if possible. 
