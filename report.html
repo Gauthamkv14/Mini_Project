@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Form</title>
+    <link rel="stylesheet" href="LOginStyloo.css">
+    <script src="https://kit.fontawesome.com/cdbcc992f6.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const reportForm = document.getElementById('reportForm');
+
+            // Handle report submission
+            reportForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                const reportText = reportForm.querySelector('textarea').value; // Get report text
+                
+                fetch('http://127.0.0.1:5000/api/reports', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ report: reportText }), // Convert data to JSON
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message); // Show success message
+                    reportForm.reset(); // Reset the form
+                })
+                .catch(error => console.error('Error:', error)); // Handle errors
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Local Disaster Response Platform</h1>
+    </header>
+
+    <main>
+        <section id="reporting">
+            <h2>Report a Disaster</h2>
+            <form id="reportForm">
+                <textarea placeholder="Describe the disaster..." required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Submit Report</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        
+
+        <p>
+            
+            📞 Contact Us: <a href="tel:+918374859585">+918374859585</a></p>
+        <p>&copy; 2025 Disaster Management System</p>
+    </footer>
+</body>
+</html>

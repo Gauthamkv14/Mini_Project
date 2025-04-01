@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Submission Form</title>
+    <link rel="stylesheet" href="LOginStyloo.css">
+    <script src="https://kit.fontawesome.com/cdbcc992f6.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const donationForm = document.getElementById('donationForm');
+            donationForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                const item = donationForm.querySelector('input[type="text"]').value; // Get item name
+                const quantity = donationForm.querySelector('input[type="number"]').value; // Get quantity
+                
+                fetch('http://127.0.0.1:5000/api/donations', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ item, quantity }), // Convert data to JSON
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Thank you for your generous donation! Your donation will be tracked.'); // Show success message
+                    donationForm.reset(); // Reset the form
+                })
+                .catch(error => console.error('Error:', error)); // Handle errors
+            });
+        });
+            
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Local Disaster Response Platform</h1>
+    </header>
+
+    <main>
+       
+        <section id="donations">
+            <h2>Resource Donation Tracking</h2>
+            <form id="donationForm">
+                <input type="text" placeholder="Item to donate" required>
+                <input type="number" placeholder="Quantity" required>
+                <button type="submit"><i class="fas fa-donate"></i> Donate</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        
+
+        <p>
+            
+            📞 Contact Us: <a href="tel:+918374859585">+918374859585</a></p>
+        <p>&copy; 2025 Disaster Management System</p>
+    </footer>
+</body>
+</html>

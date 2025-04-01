@@ -1,0 +1,80 @@
+body {
+    margin-top: 1200px;
+    background-image: url('https://www.tuxpi.com/image-sessions/019697F60C8111F0930C9EF91B4E9407/eab2f0d2253c3a358a6890a3acbbaf68.webp'); /* Path to your background image */
+    background-size: cover;  /* Make the image cover the entire page */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Prevent image repetition */
+    opacity: 20;  /* Adjust for a faded effect */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header { /* Dark red for alertness */
+    color:black;
+    padding: 15px 0; /* Increased padding for emphasis */
+    text-align: center;
+    font-size: 1.5em; /* Larger font size for visibility */
+ /* Bold bottom border */
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px; /* Increased padding for better readability */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/* Stronger shadow for depth */
+}
+
+button {
+    background-color: #ff4c4c; /* Bright red to signify action */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Slightly larger padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold; /* Bold text for urgency */
+}
+
+button:hover {
+    background-color: #ff1e1e; /* Darker red on hover */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin: 5px 0;
+     /* Red border for input fields */
+    border-radius: 5px;
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #333;  /* Adds a border above the footer */
+    border-bottom: 2px solid #333;  /* Optional: adds a border below the footer */
+}
+
+footer p {
+    margin: 5px 0;
+    color: #555;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+h2{
+    color: white;
+}

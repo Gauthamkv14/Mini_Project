@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe5e5; /* Light red background for urgency */
+}
+
+header {
+    background: #a82323; /* Dark red for alertness */
+    color: #ffffff;
+    padding: 15px 0; /* Increased padding for emphasis */
+    text-align: center;
+    font-size: 1.5em; /* Larger font size for visibility */
+    border-bottom: 3px solid #fa2a2a; /* Bold bottom border */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: #ffffff; 
+    padding: 20px; /* Increased padding for better readability */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+}
+
+button {
+    background-color: #ff4c4c; /* Bright red to signify action */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Slightly larger padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold; /* Bold text for urgency */
+}
+
+button:hover {
+    background-color: #ff1e1e; /* Darker red on hover */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin: 5px 0;
+    border: 1px solid #ff4747; /* Red border for input fields */
+    border-radius: 5px;
+}
